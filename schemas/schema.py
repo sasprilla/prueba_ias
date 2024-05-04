@@ -1,4 +1,5 @@
 from pydantic  import BaseModel, Field
+from datetime import datetime,
 from typing import Optional, Required, 
 
 class floor(BaseModel):
@@ -30,5 +31,5 @@ class reservation(BaseModel):
 
     id: Optional[int] = None
     # room_id = Column(Integer, ForeignKey(room.id))
-    entry_date: datetime =
-    departure_date: datetime =
+    entry_date: datetime = Field(str='dd/mm/yyyy HH:mm:ss')
+    departure_date: datetime = Field(str='dd/mm/yyyy HH:mm:ss')

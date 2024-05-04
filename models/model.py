@@ -3,14 +3,14 @@ from config.database import Base
 from sqlalchemy import Column, Integer, Float, Boolean, ForeignKey, DateTime, String
 
 
-class floor(Base):
+class Floor(Base):
     __tablename__ = 'floors'
 
     id = Column(Integer, primary_key=True)
     floor = Column(Integer)
 
 
-class room(Base):
+class Room(Base):
     __tablename__ = 'rooms'
 
     id = Column(Integer, primary_key=True)
@@ -20,7 +20,7 @@ class room(Base):
     number_guests = Column(Integer)
 
 
-class guest(Base):
+class Guest(Base):
     __tablename__ = 'guest'
 
     id = Column(Integer, primary_key=True)
@@ -29,7 +29,7 @@ class guest(Base):
     document_number = Column(Integer)
 
 
-class reservation(Base):
+class Reservation(Base):
     __tablename__ = 'reservation'
 
     id = Column(Integer, primary_key=True)

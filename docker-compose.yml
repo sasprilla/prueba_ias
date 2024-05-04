@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  fastapi:
+    image: prueba_backend
+    build: .
+    container_name: api-reservation
+    ports:
+      - "8085:8085"
+    volumes:
+     - ./:/app
